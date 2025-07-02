@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type Categoria from "../../../models/Categoria";
 import { listar } from "../../../services/Service";
 import CardCategorias from "../cardcategorias/CardCategoria";
-import { PacmanLoader } from "react-spinners";
+import { BeatLoader } from "react-spinners";
 
 function ListarCategorias() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,12 +21,12 @@ function ListarCategorias() {
   return (
     <>
       {isLoading && (
-        <PacmanLoader
+        <BeatLoader
           color="#0D9488"
           margin={0}
           size={80}
           speedMultiplier={2}
-          aria-label="Pacman-loading"
+          aria-label="Beat-loading"
           className="mx-auto my-28"
         />
       )}
