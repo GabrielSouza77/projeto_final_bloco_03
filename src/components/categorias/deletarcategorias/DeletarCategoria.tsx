@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 import { useNavigate, useParams } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import type Categoria from "../../../models/Categoria";
@@ -16,7 +17,7 @@ function DeletarCategoria() {
     try {
       await listar(`/categorias/${id}`, setCategoria);
     } catch (error: any) {
-      alert("Tema não encontrado!");
+      ToastAlerta("Categoria não encontrada!", "erro");
       console.error(error);
     }
   }
@@ -33,9 +34,9 @@ function DeletarCategoria() {
     try {
       await deletar(`/categorias/${id}`);
 
-      alert("Categoria apagada com sucesso");
+      ToastAlerta("Categoria apagada com sucesso", "sucesso");
     } catch (error) {
-      alert("Erro ao apagar a categoria");
+      ToastAlerta("Erro ao apagar a categoria", "erro");
       console.error(error);
     }
 

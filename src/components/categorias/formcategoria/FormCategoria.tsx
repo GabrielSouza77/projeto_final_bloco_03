@@ -1,4 +1,5 @@
 import { type ChangeEvent, useEffect, useState } from "react";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 import { useNavigate, useParams } from "react-router-dom";
 import type Categoria from "../../../models/Categoria";
 import { atualizar, cadastrar, listar } from "../../../services/Service";
@@ -16,7 +17,7 @@ function FormCategoria() {
     try {
       await listar(`/categorias/${id}`, setCategoria);
     } catch (error: any) {
-      alert("Categoria não encontrada!");
+      ToastAlerta("Categoria não encontrada!", "erro");
       console.error(error);
       retornar();
     }
@@ -43,18 +44,18 @@ function FormCategoria() {
       try {
         await atualizar(`/categorias`, categoria, setCategoria);
 
-        alert("Categoria atualizado com sucesso");
+        ToastAlerta("Categoria atualizado com sucesso", "sucesso");
       } catch (error: any) {
-        alert("Erro ao atualizar o Categoria");
+        ToastAlerta("Erro ao atualizar o Categoria", "erro");
         console.error(error);
       }
     } else {
       try {
         await cadastrar(`/categorias`, categoria, setCategoria);
 
-        alert("Categoria cadastrada com sucesso");
+        ToastAlerta("Categoria cadastrada com sucesso", "sucesso");
       } catch (error: any) {
-        alert("Erro ao cadastrar a Categoria");
+        ToastAlerta("Erro ao cadastrar a Categoria", "erro");
         console.error(error);
       }
     }
