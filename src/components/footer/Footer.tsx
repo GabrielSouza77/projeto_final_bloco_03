@@ -8,10 +8,10 @@ function Footer() {
   let data = new Date().getFullYear();
 
   return (
-    <div className="flex justify-center bg-green-400 text-white px-2 w-full fixed md:relative bottom-0 left-0 z-50">
-      <div className="container flex flex-col items-center py-2 md:py-1 gap-1 md:gap-1">
+    <div className="flex justify-center bg-green-400 text-white py-5 px-2 w-full fixed md:relative bottom-0 left-0 z-50">
+      <div className="container py-5 flex flex-col items-center md:py-1 gap-1 md:gap-1">
         <p className="text-base md:text-xl font-bold text-center">
-          Loja de Games Generation | Copyright: {data}
+          E-commerce Farmácia | Copyright: {data}
         </p>
         <p className="text-sm md:text-lg text-center">
           Acesse nossas redes sociais
