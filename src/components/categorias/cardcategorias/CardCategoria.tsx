@@ -7,26 +7,25 @@ interface CardCategoriaProps {
 
 function CardCategorias({ categoria }: Readonly<CardCategoriaProps>) {
   return (
-    <div className="border flex flex-col rounded-2xl overflow-hidden justify-between">
-      <header className="py-2 px-6 bg-slate-700  text-white font-bold text-2xl">
+    <div className=" bg-white flex flex-col rounded-2xl overflow-hidden justify-between min-h-[180px] min-w-[320px] md:min-h-[200px] md:min-w-[380px] shadow-xl transition-transform hover:scale-105 hover:shadow-2xl duration-200">
+      <header className="py-3 px-6 bg-green-500 text-white font-bold text-2xl flex items-center gap-2">
         Categoria
       </header>
-      <p className="p-8 text-3xl bg-white h-full">{categoria.nome}</p>
-      <div className="flex">
+      <p className="p-6 text-3xl text-green-900 font-semibold text-center flex-1 flex items-center justify-center">
+        {categoria.nome}
+      </p>
+      <div className="flex divide-x divide-green-200">
         <Link
           to={`/editarcategoria/${categoria.id}`}
-          className="w-full text-slate-100 bg-teal-600 hover:bg-teal-700 
-                        flex items-center justify-center py-2"
+          className="w-1/2 text-slate-100 bg-teal-600 hover:bg-teal-700 flex items-center justify-center py-3 font-medium rounded-bl-2xl transition-colors duration-150"
         >
-          <button>Editar</button>
+          Editar
         </Link>
-
         <Link
           to={`/deletarcategoria/${categoria.id}`}
-          className="text-slate-100 bg-red-400 hover:bg-red-700 w-full 
-                        flex items-center justify-center"
+          className="w-1/2 text-slate-100 bg-red-500 hover:bg-red-700 flex items-center justify-center py-3 font-medium rounded-br-2xl transition-colors duration-150"
         >
-          <button>Deletar</button>
+          Deletar
         </Link>
       </div>
     </div>

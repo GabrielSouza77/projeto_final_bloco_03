@@ -55,22 +55,22 @@ function DeletarCategoria() {
       <p className="text-center font-semibold mb-4 text-base md:text-lg">
         Você tem certeza de que deseja apagar a categoria a seguir?
       </p>
-      <div className="border flex flex-col rounded-2xl overflow-hidden justify-between">
-        <header className="py-2 px-4 md:px-6 bg-slate-600 text-white font-bold text-lg md:text-2xl">
+      <div className=" bg-white flex flex-col rounded-2xl overflow-hidden justify-between shadow-xl transition-transform hover:scale-105 hover:shadow-2xl duration-200">
+        <header className="py-3 px-6 bg-green-500 text-white font-bold text-2xl flex items-center gap-2">
           Categoria
         </header>
-        <p className="p-4 md:p-8 text-xl md:text-3xl bg-white h-full">
+        <p className="p-6 text-3xl text-green-900 font-semibold text-center flex-1 flex items-center justify-center leading-relaxed md:leading-loose">
           {categoria.nome}
         </p>
-        <div className="flex flex-row">
+        <div className="flex divide-x divide-green-200">
           <button
-            className="text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2 text-base md:text-lg"
+            className="w-1/2 text-slate-100 bg-red-500 hover:bg-red-700 flex items-center justify-center py-3 font-medium rounded-bl-2xl transition-colors duration-150 text-base md:text-lg"
             onClick={retornar}
           >
             Não
           </button>
           <button
-            className="w-full text-slate-100 bg-teal-600 hover:bg-teal-700 flex items-center justify-center text-base md:text-lg"
+            className="w-1/2 text-slate-100 bg-teal-600 hover:bg-teal-700 flex items-center justify-center py-3 font-medium rounded-br-2xl transition-colors duration-150 text-base md:text-lg"
             onClick={deletarCategoria}
           >
             {isLoading ? (

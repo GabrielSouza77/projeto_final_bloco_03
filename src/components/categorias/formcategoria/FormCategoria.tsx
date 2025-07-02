@@ -83,15 +83,14 @@ function FormCategoria() {
             type="text"
             placeholder="Categoria"
             name="nome"
-            className="bg-white border-2 border-slate-700 rounded p-2 utral-800 text-base md:text-lg"
+            className="bg-white border-2 border-green-700 rounded p-2 utral-800 text-base md:text-lg"
             required
             value={categoria.nome}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
         </div>
         <button
-          className="rounded text-slate-100 bg-slate-400 
-          hover:bg-slate-800 w-full md:w-1/2 py-2 mx-auto flex justify-center text-base md:text-lg"
+          className="rounded text-slate-100 bg-green-700 hover:bg-green-500 focus:bg-green-800 active:bg-green-900 w-full md:w-1/2 py-2 mx-auto flex justify-center text-base md:text-lg font-semibold shadow-md transition-colors duration-300 ease-in-out"
           type="submit"
         >
           {isLoading ? (

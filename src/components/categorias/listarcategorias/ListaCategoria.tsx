@@ -38,7 +38,7 @@ function ListarCategorias() {
             </div>
           )}
 
-          <div className="grid grid-cols-1 gap-x-2 gap-y-4 my-22 md:my-0 sm:gap-x-6 sm:gap-y-2 lg:gap-x-4 lg:gap-y-2 md:grid-cols-3">
+          <div className="w-full grid grid-cols-1 gap-x-2 gap-y-10 my-22 md:my-0 sm:gap-x-6 sm:gap-y-8 lg:gap-x-4 lg:gap-y-10 md:grid-cols-3">
             {categorias.map((categoria) => (
               <CardCategorias key={categoria.id} categoria={categoria} />
             ))}
